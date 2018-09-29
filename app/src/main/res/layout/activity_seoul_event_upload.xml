@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context=".SeoulEventUpload">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/upload_Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9b1a6b90"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:titleTextColor="@android:color/background_light" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/edit_text_file_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/edit_text_file_name"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="80dp"
+                android:hint="글쓴이"
+                tools:ignore="DuplicateIds" />
+
+            <EditText
+                android:id="@+id/edit_text_file_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progress_bar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:hint="글을 입력해주세요."
+                tools:ignore="DuplicateIds" />
+
+            <Button
+                android:id="@+id/button_choose_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이미지선택" />
+
+            <EditText
+                android:id="@+id/edit_text_file_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/button_choose_image"
+                android:hint="제목을 적어 주세요." />
+
+            <ImageView
+                android:id="@+id/up_imageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_above="@+id/progress_bar"
+                android:layout_below="@+id/edit_text_file_name"
+                android:layout_marginBottom="176dp"
+                android:layout_marginTop="16dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button_upload"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/button_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="업로드" />
+
+            <TextView
+                android:id="@+id/text_view_show_uploads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/button_upload"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:text="업로드 확인하기" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

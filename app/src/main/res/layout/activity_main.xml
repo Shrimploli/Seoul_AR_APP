@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroud_1">
+
+    <com.dev.sacot41.scviewpager.SCViewPager
+        android:id="@+id/viewpager_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.dev.sacot41.scviewpager.SCViewPager>
+
+    <com.dev.sacot41.scviewpager.DotsView
+        android:id="@+id/dotsview_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+    </com.dev.sacot41.scviewpager.DotsView>
+
+    <kr.go.seoul.airquality.AirQualityButtonTypeB
+        android:id="@+id/weather_qility_btn"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="265dp"
+        android:gravity="center"
+        android:paddingBottom="80dp"
+        android:paddingTop="0dp" >
+
+    </kr.go.seoul.airquality.AirQualityButtonTypeB>
+
+    <com.lypeer.googleioclock.GoogleClock
+        android:id="@+id/clock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/ar_weather_title"
+        android:layout_width="wrap_content"
+        android:layout_height="238dp"
+        android:layout_above="@+id/weather_qility_btn"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-265dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ar_weather_title" />
+
+    <kr.go.seoul.airquality.AirQualityTypeMini
+        android:id="@+id/airquality_mini"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="80dp" />
+
+    <ImageView
+        android:id="@+id/ar_weather_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/ar_weather_bottom" />
+
+    <LinearLayout
+        android:id="@+id/AR_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/AR_image"
+        android:orientation="vertical"
+        tools:ignore="NotSibling">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="192dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:scaleType="center"
+            android:src="@drawable/ar_weather_btn" />
+
+        <in.shadowfax.proswipebutton.ProSwipeButton
+            android:id="@+id/proswipebutton_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:btn_text="AR실행할려면 화살표를 슬라이딩 해주세요" />
+    </LinearLayout>
+
+    <kr.go.seoul.culturalevents.CulturalEventTypeMini
+        android:id="@+id/cultural_mini"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="80dp" />
+
+    <kr.go.seoul.culturalevents.CulturalEventButtonTypeA
+        android:id="@+id/cultural_quality_btn"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="265dp"
+        android:gravity="center"
+        android:paddingBottom="80dp"
+        android:paddingTop="0dp" />
+
+
+    <ImageView
+        android:id="@+id/calture_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:src="@drawable/calture_bottom" />
+
+    <ImageView
+        android:id="@+id/community_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-5dp"
+        android:src="@drawable/community_title" />
+
+    <ImageButton
+        android:id="@+id/seoul_event_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="@android:color/transparent"
+        android:elevation="24dp"
+        android:src="@drawable/comit_icon"
+        android:theme="?attr/buttonStyle" />
+
+    <ImageView
+        android:id="@+id/seoul_comit_CardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/seoul_event_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/comit_bottom" />
+
+
+    <ImageView
+        android:id="@+id/seoul_nanum_CardView"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_check_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/seoul_icon" />
+
+    <ImageView
+        android:id="@+id/textview_main_github_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageview_main_check_out"
+        android:src="@drawable/seoul_map"
+        />
+
+    <TextView
+        android:id="@+id/textview_main_linkedin_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_main_github_link"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:autoLink="web"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/theme_700" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#aa1a6b90"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextColor="@color/white" />
+
+
+</RelativeLayout>
